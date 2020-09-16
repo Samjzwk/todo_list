@@ -1,0 +1,70 @@
+@import './utils/reset.scss';
+
+.App{
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(175, 192, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  
+  span{
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 1rem;
+  }
+  input{
+    border: 0;
+    border-bottom: 2px solid #af7eeb;
+  }
+
+  .submit{
+    margin-top: 0.3rem;
+    border: 0;
+    background-color: #af7eeb;
+    padding: 0.5rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    &:active{
+      transform: translateY(1px);
+    }
+  }
+
+  .close{
+    position: absolute;
+    background-color: #af7eeb;
+    border: 0;
+    border-radius: 50%;
+    color:white;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+    top: -1rem;
+    right: -1rem;
+    cursor: pointer;
+  }
+}
